@@ -158,7 +158,7 @@
 
     /** Detect the OS of the platform */
     var os = (function() {
-      if (java) {
+      if (!document && java) {
         return java.lang.System.getProperty('os.name');
       }
       if (phantom) {
